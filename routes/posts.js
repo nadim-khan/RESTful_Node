@@ -18,7 +18,7 @@ router.get('/:postId',async(req,res)=>{
     try{
         const postsById= await Post.findById(req.params.postId);
         res.json(postsById);
-        console.log('\n ==> Reques for post with ID [ '+req.params.postId+' ] Required Post : ',postsById)
+        console.log('\n ==> Reques for Post with ID [ '+req.params.postId+' ] Required Post : ',postsById)
     }catch(err){
         res.json({message:err});
     }
